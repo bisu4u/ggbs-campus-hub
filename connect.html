@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Connect - GGBS</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/connect.js"></script>
+
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+
+<header class="navbar">
+    <div class="logo">
+        <h2>Student Connect</h2>
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="connect.html">Connect</a>
+        <a href="resources.html">Resources</a>
+        <a href="events.html">Events</a>
+        <a href="clubs.html">Clubs</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </nav>
+</header>
+
+<!-- ===== FILTER + SEARCH ===== -->
+
+<section class="connect-filter">
+
+<h2 class="find-heading">Find Students</h2>
+
+<input type="text" id="searchInput" placeholder="Search by name..." onkeyup="filterStudents()">
+
+<select id="deptFilter" onchange="filterStudents()">
+    <option value="All">All Departments</option>
+    <option value="BCA">BCA</option>
+    <option value="BBA">BBA</option>
+    <option value="BSC">BSc CS</option>
+</select>
+
+</section>
+
+<!-- ===== STUDENT DIRECTORY ===== -->
+
+<section class="student-directory">
+
+<div id="studentContainer" class="card-container">
+</div>
+
+</section>
+
+<footer class="footer">
+    <p>© 2026 Gandhi Global Business Studies. All Rights Reserved.</p>
+    <p>Designed by <span class="designer">Biswajit Jena, Prajwalika Pal, Shreedhar Lenka, G. Subhasri Dora & Aditya Sabat</span></p>
+</footer>
+
+</body>
+</html>

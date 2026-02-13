@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes & Resources - GGBS</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/resources.js"></script>
+
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+
+<header class="navbar">
+    <div class="logo">
+        <h2>Notes & Resources</h2>
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="connect.html">Connect</a>
+        <a href="resources.html">Resources</a>
+        <a href="events.html">Events</a>
+        <a href="clubs.html">Clubs</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </nav>
+</header>
+
+<!-- ===== DEPARTMENT FILTER ===== -->
+
+<section class="resource-filter">
+
+<h2 class="resource-heading">Academic Resources</h2>
+
+
+<select id="deptFilter" onchange="filterResources()">
+    <option value="All">All Departments</option>
+    <option value="BCA">BCA</option>
+    <option value="BBA">BBA</option>
+    <option value="BSC">BSc CS</option>
+</select>
+
+</section>
+
+<!-- ===== NOTES LIST ===== -->
+
+<section class="notes-section">
+
+<div id="notesContainer" class="card-container"></div>
+
+</section>
+
+<!-- ===== UPLOAD NOTES ===== -->
+
+<section class="upload-section">
+
+<h2 class="upload-heading">Upload Notes</h2>
+
+<form id="uploadForm">
+
+<input type="text" id="title" placeholder="Notes Title" required>
+<input type="text" id="subject" placeholder="Subject" required>
+
+<select id="uploadDept">
+    <option value="BCA">BCA</option>
+    <option value="BBA">BBA</option>
+    <option value="BSC">BSc CS</option>
+</select>
+
+<button type="submit">Upload</button>
+
+</form>
+
+</section>
+
+<footer class="footer">
+    <p>© 2026 Gandhi Global Business Studies. All Rights Reserved.</p>
+    <p>Designed by <span class="designer">Biswajit Jena, Prajwalika Pal, Shreedhar Lenka, G. Subhasri Dora & Aditya Sabat</span></p>
+</footer>
+
+</body>
+</html>

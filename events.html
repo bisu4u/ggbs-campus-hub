@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events & Announcements - GGBS</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/events.js"></script>
+
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+
+<header class="navbar">
+    <div class="logo">
+        <h2>Campus Events</h2>
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="connect.html">Connect</a>
+        <a href="resources.html">Resources</a>
+        <a href="events.html">Events</a>
+        <a href="clubs.html">Clubs</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </nav>
+</header>
+
+<!-- ===== EVENTS LIST ===== -->
+
+<section class="events-section">
+
+<h2 class="events-heading">Upcoming Events</h2>
+
+<div id="eventsContainer" class="card-container"></div>
+
+</section>
+
+<!-- ===== ANNOUNCEMENTS ===== -->
+
+<section class="announcement-board">
+
+<h2 class="announcement-heading">Important Announcements</h2>
+
+<ul>
+    <li>📢 Semester Exams begin from March 10</li>
+    <li>📚 Internal Assessment schedule released</li>
+    <li>🎓 Placement Training starts next week</li>
+    <li>🏆 Inter-college Sports Meet on April 5</li> 
+    <li>💻 Hackathon registration open until March 15</li>
+    <li>🎉 Tech Fest 2026 on April 20-22</li>
+    <li>🎤 Literary Fest on May 15</li>
+    <li>🎨 Art Exhibition on June 10</li>
+</ul>
+
+</section>
+
+<!-- Event Registration Modal -->
+<div id="eventModal" class="modal">
+
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+
+        <h2>Event Registration</h2>
+
+        <form id="eventForm">
+
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Roll Number" required>
+
+            <select required>
+                <option value="">Select Department</option>
+                <option>BCA</option>
+                <option>BBA</option>
+                <option>BSC</option>
+            </select>
+
+            <input type="tel" placeholder="Phone Number" required>
+
+            <button class="register-btn" onclick="openModal()">Register</button>
+
+        </form>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <p>© 2026 Gandhi Global Business Studies. All Rights Reserved.</p>
+    <p>Designed by <span class="designer">Biswajit Jena, Prajwalika Pal, Shreedhar Lenka, G. Subhasri Dora & Aditya Sabat</span></p>
+</footer>
+
+</body>
+</html>
